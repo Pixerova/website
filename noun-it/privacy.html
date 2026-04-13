@@ -1715,35 +1715,6 @@
     </div>
   </footer>
 
-  <!-- ── Language toggle script ──────────────────────────────── -->
-  <script>
-    (function() {
-      var currentLang = 'en';
-
-      var langBtns = document.querySelectorAll('.lang-btn');
-      var translatables = document.querySelectorAll('[data-en]');
-
-      function setLang(lang) {
-        currentLang = lang;
-        translatables.forEach(function(el) {
-          var text = el.getAttribute('data-' + lang);
-          if (text) el.textContent = text;
-        });
-        langBtns.forEach(function(btn) {
-          var active = btn.getAttribute('data-lang') === lang;
-          btn.classList.toggle('active', active);
-          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-        });
-        document.documentElement.setAttribute('lang', lang);
-      }
-
-      langBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          setLang(btn.getAttribute('data-lang'));
-        });
-      });
-    })();
-  </script>
 
 </body>
 

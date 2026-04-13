@@ -110,20 +110,6 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 2px 12px rgba(99,102,241,0.4);
 }
 
-/* Hero variant — pill on dark background */
-.lang-pill--dark {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.2);
-}
-
-.lang-pill--dark .lang-btn {
-  color: rgba(255,255,255,0.5);
-}
-
-.lang-pill--dark .lang-btn:hover {
-  color: rgba(255,255,255,0.8);
-}
-
 /* ── Navigation ─────────────────────────────────────────────── */
 .nav {
   position: fixed;
@@ -411,11 +397,17 @@ img { display: block; max-width: 100%; }
     grid-template-columns: 1fr;
   }
   .nav-links {
-    display: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 12px;
+  }
+  .nav-links a {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
   :root { --section-padding: 64px 20px; }
   .hero-content { padding: 100px 20px 60px; }
+  .nav-links { display: none; }
 }

@@ -40,7 +40,9 @@ Before touching anything, copy the current file to a backup:
 cp noun-it/privacy.html noun-it/privacy-original-backup.html
 ```
 
-Do not commit this backup — it is for recovery only.
+Do not commit this backup — it is for recovery only. It is excluded via
+`.gitignore`, so git will not stage it automatically. If you ever see it
+appearing in `git status`, stop and check your gitignore before proceeding.
 
 ### 3. Paste into the page
 
