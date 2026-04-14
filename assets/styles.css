@@ -146,6 +146,10 @@ img { display: block; max-width: 100%; }
   width: auto;
 }
 
+.nav-logo--right {
+  margin-left: auto;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -175,6 +179,7 @@ img { display: block; max-width: 100%; }
 .hero-bg {
   position: absolute;
   inset: 0;
+  background-image: url('images/main-background.webp');
   background-size: cover;
   background-position: center;
 }
@@ -263,6 +268,10 @@ img { display: block; max-width: 100%; }
   color: var(--color-text);
   margin-bottom: 20px;
   font-size: 16px;
+}
+
+.about-text .section-label {
+  margin-top: 28px;
 }
 
 .about-areas {

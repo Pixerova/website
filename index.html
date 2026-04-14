@@ -6,7 +6,7 @@
   <title>Pixerova — Where Creativity Meets Code</title>
   <meta name="description" content="Pixerova is a global creative and technology studio empowering businesses, startups, and individuals to bring their biggest ideas to life." />
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self';" />
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self';" />
   <!-- Open Graph -->
   <meta property="og:title" content="Pixerova — Where Creativity Meets Code" />
   <meta property="og:description" content="Global creative and technology studio for mobile apps, custom software, and photography." />
@@ -40,7 +40,7 @@
 
   <!-- ── Hero ────────────────────────────────────────────────── -->
   <section class="hero" aria-label="Hero">
-    <div class="hero-bg" aria-hidden="true" style="background-image: url('assets/images/main-background.webp'); opacity: 1;"></div>
+    <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <h1 class="hero-title">Pixerova</h1>
@@ -70,7 +70,7 @@
              data-es="Con experiencia en desarrollo de software en Google, Microsoft y startups de alto crecimiento, ofrecemos experiencia de nivel empresarial con el toque personal que solo un estudio dedicado puede brindar. Cada cliente recibe una experiencia personalizada — sin soluciones genéricas, solo detalles de calidad de principio a fin.">
             Founded by a technologist with experience at Google, Microsoft, and high-growth startups, we bring enterprise-grade expertise with the personal touch only a dedicated studio can offer. Every client gets a hands-on experience — no cookie-cutter solutions, just quality craftsmanship from start to finish.
           </p>
-          <p class="section-label" style="margin-top: 28px;"
+          <p class="section-label"
              data-en="What we do:"
              data-es="Lo que hacemos:">
             What we do:
@@ -203,41 +203,7 @@
     </div>
   </footer>
 
-  <!-- ── Language toggle script ──────────────────────────────── -->
-  <script>
-    (function () {
-      var currentLang = 'en';
-
-      var langBtns = document.querySelectorAll('.lang-btn');
-      var translatables = document.querySelectorAll('[data-en]');
-
-      function setLang(lang) {
-        currentLang = lang;
-
-        // Update all translatable elements
-        translatables.forEach(function (el) {
-          var text = el.getAttribute('data-' + lang);
-          if (text) el.textContent = text;
-        });
-
-        // Update button states
-        langBtns.forEach(function (btn) {
-          var active = btn.getAttribute('data-lang') === lang;
-          btn.classList.toggle('active', active);
-          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-        });
-
-        // Update html lang attribute
-        document.documentElement.setAttribute('lang', lang);
-      }
-
-      langBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          setLang(btn.getAttribute('data-lang'));
-        });
-      });
-    })();
-  </script>
+  <script src="assets/lang.js"></script>
 
 </body>
 </html>
