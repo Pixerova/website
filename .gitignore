@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories
+.vscode/
+.idea/
+
+# Termly backup files — local recovery only, never committed
+noun-it/privacy-original-backup.html
